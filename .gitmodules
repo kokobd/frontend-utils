@@ -1,0 +1,3 @@
+[submodule "servant-reflex"]
+	path = servant-reflex
+	url = https://github.com/IsumiF/servant-reflex.git

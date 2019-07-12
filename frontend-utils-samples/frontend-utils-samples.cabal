@@ -1,0 +1,61 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 23013a78eee23a97970e5e7737418be435384bd44e6f614809537018788da1ea
+
+name:           frontend-utils-samples
+version:        0.1.0
+synopsis:       Samples for front-utils
+category:       Web
+author:         Isumi Feng
+maintainer:     contact@zelinf.net
+copyright:      Copyright 2019, Isumi Feng
+license:        BSD-3-Clause
+build-type:     Custom
+extra-source-files:
+    webres/styles/all.scss
+    webres/favicon.ico
+
+custom-setup
+  setup-depends:
+      Cabal
+    , base
+    , filepath
+    , frontend-utils
+
+executable calculator
+  main-is: Main.hs
+  other-modules:
+      Paths_frontend_utils_samples
+  hs-source-dirs:
+      app
+  default-extensions: OverloadedStrings OverloadedLists
+  ghc-options: -Wall -Wno-simplifiable-class-constraints
+  build-depends:
+      aeson
+    , base
+    , bytestring
+    , containers
+    , data-default
+    , directory
+    , file-embed
+    , frontend-utils
+    , generic-deriving
+    , ghcjs-dom
+    , jsaddle
+    , jsaddle-dom
+    , lens
+    , mtl
+    , reflex
+    , reflex-dom
+    , reflex-dom-core
+    , servant
+    , servant-reflex
+    , shakespeare
+    , text
+    , time
+    , transformers
+  default-language: Haskell2010

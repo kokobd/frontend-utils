@@ -1,0 +1,64 @@
+name:                frontend-utils
+version:             0.1.0.0
+synopsis:            Common utilities for frontend devlopment with reflex
+# description:
+# bug-reports:
+license:             BSD-3-Clause
+author:              Isumi Feng
+maintainer:          contact@zelinf.net
+copyright:           Copyright 2019, Isumi Feng
+category:            Web
+
+ghc-options: -Wall -Wno-simplifiable-class-constraints
+
+default-extensions:
+- OverloadedStrings
+- OverloadedLists
+
+dependencies:
+- base
+- aeson
+- bytestring
+- containers
+- data-default
+- directory
+- file-embed
+- filepath
+- generic-deriving
+- ghcjs-dom
+- jsaddle
+- jsaddle-dom
+- lens
+- mtl
+- reflex
+- reflex-dom
+- reflex-dom-core
+- servant
+- servant-reflex
+- shakespeare
+- text
+- time
+- transformers
+
+library:
+  source-dirs:
+  - src
+  dependencies:
+  - Cabal
+  when:
+  - condition: impl(ghcjs)
+    then:
+      exposed-modules:
+      - FrontendUtils.DevUtil.GHCJS
+    else: 
+      exposed-modules:
+      - FrontendUtils.DevUtil.GHC
+      dependencies:
+      - jsaddle
+      - filepath
+      - jsaddle-warp
+      - wai
+      - wai-app-static
+      - warp
+      - websockets
+      - optparse-applicative

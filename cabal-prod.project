@@ -1,0 +1,12 @@
+compiler: ghcjs
+
+packages:
+  ./
+  frontend-utils-samples/
+  servant-reflex/
+
+constraints: unix      installed
+           , directory installed
+           , process   installed
+           , time      installed
+           , filepath  installed

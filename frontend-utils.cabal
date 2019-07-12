@@ -1,0 +1,70 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 51df9e4ee88a157767a9da3f939b34010d4b06e8204c35d195d50f813fc564ed
+
+name:           frontend-utils
+version:        0.1.0.0
+synopsis:       Common utilities for frontend devlopment with reflex
+category:       Web
+author:         Isumi Feng
+maintainer:     contact@zelinf.net
+copyright:      Copyright 2019, Isumi Feng
+license:        BSD-3-Clause
+build-type:     Simple
+
+library
+  exposed-modules:
+      FrontendUtils.DevUtil
+      FrontendUtils.DevUtil.Cabal
+      FrontendUtils.WebApp
+  other-modules:
+      Paths_frontend_utils
+  hs-source-dirs:
+      src
+  default-extensions: OverloadedStrings OverloadedLists
+  ghc-options: -Wall -Wno-simplifiable-class-constraints
+  build-depends:
+      Cabal
+    , aeson
+    , base
+    , bytestring
+    , containers
+    , data-default
+    , directory
+    , file-embed
+    , filepath
+    , generic-deriving
+    , ghcjs-dom
+    , jsaddle
+    , jsaddle-dom
+    , lens
+    , mtl
+    , reflex
+    , reflex-dom
+    , reflex-dom-core
+    , servant
+    , servant-reflex
+    , shakespeare
+    , text
+    , time
+    , transformers
+  if impl(ghcjs)
+    exposed-modules:
+        FrontendUtils.DevUtil.GHCJS
+  else
+    exposed-modules:
+        FrontendUtils.DevUtil.GHC
+    build-depends:
+        filepath
+      , jsaddle
+      , jsaddle-warp
+      , optparse-applicative
+      , wai
+      , wai-app-static
+      , warp
+      , websockets
+  default-language: Haskell2010

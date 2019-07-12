@@ -1,0 +1,63 @@
+name:                frontend-utils-samples
+version:             0.1.0
+synopsis:            Samples for front-utils
+# description:
+# bug-reports:
+license:             BSD-3-Clause
+author:              Isumi Feng
+maintainer:          contact@zelinf.net
+copyright:           Copyright 2019, Isumi Feng
+category:            Web
+
+ghc-options: -Wall -Wno-simplifiable-class-constraints
+
+default-extensions:
+- OverloadedStrings
+- OverloadedLists
+
+extra-source-files:
+- webres/styles/**/*.scss
+- webres/favicon.ico
+
+custom-setup:
+  dependencies:
+  - base
+  - Cabal
+  - frontend-utils
+  - filepath
+
+dependencies:
+- base
+- aeson
+- containers
+- jsaddle
+- jsaddle-dom
+- ghcjs-dom
+- reflex
+- reflex-dom
+- reflex-dom-core
+- servant
+- servant-reflex
+- text
+- time
+- lens
+- mtl
+- transformers
+- data-default
+- shakespeare
+- generic-deriving
+- bytestring
+- file-embed
+- directory
+
+# library:
+#   source-dirs:
+#   - src
+
+executables:
+  calculator:
+    source-dirs:
+    - app
+    main: Main.hs
+    dependencies:
+    - frontend-utils
