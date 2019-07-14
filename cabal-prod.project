@@ -4,6 +4,7 @@ packages:
   ./
   frontend-utils-samples/
   servant-reflex/
+  jsaddle-warp/
 
 constraints: unix      installed
            , directory installed

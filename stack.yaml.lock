@@ -12,6 +12,20 @@ packages:
   original:
     hackage: jsaddle-0.9.6.0
 - completed:
+    size: 7592
+    url: https://github.com/IsumiF/jsaddle-warp/archive/17d75f44faf9e9840f924ff207728532ec156749.tar.gz
+    cabal-file:
+      size: 2710
+      sha256: d84550439a50ab058f049beb0dac567a86eb4b09552ec242f1c57b3a16ab68bc
+    name: jsaddle-warp
+    version: 0.9.6.0
+    sha256: 8220c6917a427018846d178c65b53e004e5c9f306d3cea8e5fd51e949c65a6e8
+    pantry-tree:
+      size: 524
+      sha256: fb8c8f77d83a42c8f8367b0ba7cd30444896c4a26e129fe5a1425802fe5e47ac
+  original:
+    url: https://github.com/IsumiF/jsaddle-warp/archive/17d75f44faf9e9840f924ff207728532ec156749.tar.gz
+- completed:
     hackage: jsaddle-dom-0.9.3.1@sha256:6f38a71c0d4860ac307f2603e0eb18a4d3ce1ccc29f2d2080e1bebfc7bc46b45,75595
     pantry-tree:
       size: 48180
@@ -46,6 +60,20 @@ packages:
       sha256: 04039dc665b891fdb9b4c3a1032deb25e314229ec37d8c47fe0e8d7441244bc0
   original:
     hackage: reflex-dom-core-0.5
+- completed:
+    size: 35319
+    url: https://github.com/IsumiF/servant-reflex/archive/060c7e416edfade1bcfb7d2abe898bf19b244d24.tar.gz
+    cabal-file:
+      size: 1847
+      sha256: dd85aff40716580edaf80a94709330d6c393a2a5c5ba5e468918bd8c9703a529
+    name: servant-reflex
+    version: 0.3.4
+    sha256: 4a591d7ef4b2a20be1e74dcc1bcfabbe82c8cd1a3448df12f01a67e79560932d
+    pantry-tree:
+      size: 2141
+      sha256: ff6f339bebcddf87b32a643b502b6bcc35965247185aba2bdfbba21846fd18bf
+  original:
+    url: https://github.com/IsumiF/servant-reflex/archive/060c7e416edfade1bcfb7d2abe898bf19b244d24.tar.gz
 - completed:
     hackage: ref-tf-0.4.0.1@sha256:369e5c6237e4b6fe330fde021b94a9f98971690cbec5b910faa9af3cbcb15610,1133
     pantry-tree:

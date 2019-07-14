@@ -1,3 +1,6 @@
 [submodule "servant-reflex"]
 	path = servant-reflex
 	url = https://github.com/IsumiF/servant-reflex.git
+[submodule "jsaddle-warp"]
+	path = jsaddle-warp
+	url = https://github.com/IsumiF/jsaddle-warp.git
