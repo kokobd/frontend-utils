@@ -8,12 +8,12 @@ module FrontendUtils.DevUtil
 
 #ifdef ghcjs_HOST_OS
 #else
-import           FrontendUtils.DevUtil.GHC (runJsmWarp)
+import           FrontendUtils.DevUtil.GHC         (runJsmWarp)
 #endif
-import           Language.Javascript.JSaddle.Types      (JSM)
+import           Language.Javascript.JSaddle.Types (JSM)
 
 data GhcJsmConfig
-  -- | port, root folder
+  -- | port, root folder to static resources
   = WarpConfig Int FilePath
 
 {-| Converts @JSM ()@ to @IO ()@.

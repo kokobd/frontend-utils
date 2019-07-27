@@ -1,2 +1,0 @@
-with-compiler: /opt/ghcjs/8.4/bin/ghcjs
-optimization: 2

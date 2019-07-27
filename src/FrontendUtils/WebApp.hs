@@ -14,7 +14,7 @@ module FrontendUtils.WebApp
   , materialize
   , linkCss
   -- *Predefined combinations
-  , appMaterialized
+  , materialize'
   ) where
 
 import           Control.Lens
@@ -79,8 +79,11 @@ linkCss cssUrl = over webApp_head addLinkCss
         <> "href" =: cssUrl
         <> "media" =: "screen,projection") blank
 
-appMaterialized :: (MonadWidget t m, MonadWidget t2 n)
-                => Text -- ^css bundle url
-                -> WebApp m n
-                -> WebApp m n
-appMaterialized cssUrl = linkCss cssUrl . materialize . viewPortMobile
+{-|Complete combinator set for a simple materialized app.
+Based on 'materialize', with 'viewPortMobile', 'linkCss' included.
+-}
+materialize' :: (MonadWidget t m, MonadWidget t2 n)
+             => Text -- ^css bundle url
+             -> WebApp m n
+             -> WebApp m n
+materialize' cssUrl = linkCss cssUrl . materialize . viewPortMobile
